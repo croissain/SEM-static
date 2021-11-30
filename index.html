@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Events Manager</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/tabs.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap 5.1.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-content">
+            <div class="logo">
+                <div class="logo_name"></div>
+            </div>
+        </div>
+        <ul class="nav_list">
+            <li class="sidebar-toggle">
+                <i class="sidebar-icon fas fa-bars toggle-btn"></i>
+            </li>
+            <div class="sidebar-options">
+                <li class="sidebar-tab active">
+                    <a href="#">
+                        <i class="sidebar-icon fas fa-th-large"></i>
+                        <span class="links-name label">Trang chủ</span>
+                    </a>
+                </li>
+                <li class="sidebar-tab">
+                    <a href="#">
+                        <i class="sidebar-icon fas fa-users"></i>
+                        <span class="links-name label">Các đội</span>
+                    </a>
+                </li>
+                <li class="sidebar-tab">
+                    <a href="#">
+                        <i class="sidebar-icon fas fa-chart-bar"></i>
+                        <span class="links-name label">Biểu đồ</span>
+                    </a>
+                </li>
+            </div>
+            <div class="sidebar-sport-list">
+                <li class="sport-tab active">
+                    <a href="#">
+                        <i class="sidebar-icon sidebar-sport-icon far fa-futbol" class="sport-tab"></i>
+                        <span class="links-name label">Bóng đá</span>
+                    </a>
+                </li>
+                <li class="sport-tab">
+                    <a href="#">
+                        <i class="sidebar-icon sidebar-sport-icon fas fa-basketball-ball"></i>
+                        <span class="links-name label">Bóng chuyền</span>
+                    </a>
+                </li>
+                <li class="sport-tab">
+                    <a href="#">
+                        <i class="sidebar-icon sidebar-sport-icon fas fa-football-ball"></i>
+                        <span class="links-name label">Bóng bầu dục</span>
+                    </a>
+                </li>
+                <li class="sport-tab">
+                    <a href="#">
+                        <i class="sidebar-icon sidebar-sport-icon fas fa-baseball-ball"></i>
+                        <span class="links-name label">Bóng chày</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <div class="line"></div>
+    </div>
+
+    <div id="wrapper">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">S.E.M</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link label" href="#">Trận đấu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link label" href="#">Highlights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link label" href="#">Quy tắc</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link label disabled">Phân tích</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link label" href="#">Về trang web</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav nav-item dropdown ms-auto text-center">
+                        <div class="navbar__user d-flex" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <li>
+                                <img src="./assets/img/picme.jpg" alt="" class="user-avatar">
+                            </li>
+                            <li class="navbar__user dropdown gx-0 row">
+                                <p class="user-name">Tho Le</p>
+                                <p class="user-role">Admin</p>
+                            </li>
+                        </div>
+                        <ul class="dropdown-menu  dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">
+                                    <span><i class="fas fa-user"></i></span>
+                                    Profile
+
+                                </a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <span><i class="fas fa-cog"></i></span> Setting</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">
+                                    <span><i class="fas fa-sign-out-alt"></i></span>
+                                    Log out
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /Navbar -->
+
+
+        <div class="container-fluid g-5">
+            <div class="row g-5">
+                <!-- Start tab -->
+                <div class="start-tab col-xl-3">
+                    <!-- Live matches -->
+                    <div class="tab-container mb-5">
+                        <p class="start-tab__label label">Trận đấu trực tiếp</p>
+                        <div class="live-match__match d-flex align-items-baseline">
+                            <div class="live-match__match-left text-center">
+                                <img src="./assets/img/logo1.png" alt=""
+                                    class="live-match__logo live-match__match-left-logo">
+                                <p class="live-match__match-left-name">ĐH NN&CN VN</p>
+                            </div>
+                            <div class="live-match__match-score">
+                                <span class="match-score-left">2</span>
+                                <span>-</span>
+                                <span class="match-score-right">0</span>
+                            </div>
+                            <div class="live-match__match-right text-center">
+                                <img src="./assets/img/logo2.png" alt=""
+                                    class="live-match__logo live-match__match-right-logo">
+                                <p class="live-match__match-right-name">ĐH VH TP.HCM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Live matches -->
+
+                    <!-- Teams -->
+                    <div class="tab-container mb-5">
+                        <p class="start-tab__label label">Các đội dẫn đầu</p>
+                        <div class="team-list">
+                            <div class="team-item">
+                                <div class="team-item__logo d-flex justify-content-between align-items-center">
+                                    <img src="./assets/img/logo1.png" alt="" class="team-item__logo-img">
+                                    <p class="team-item__name-text flex-grow-1">ĐH Ngoại ngữ và công nghệ</p>
+                                    <span class="team-item__detail">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Teams -->
+
+                    <!-- Best players -->
+                    <div class="tab-container mb-5">
+                        <p class="start-tab__label label">Các cầu thủ xuất sắc</p>
+                        <div class="best-player-list">
+                            <div class="best-player-item">
+                                <div class="best-player-item__logo d-flex align-items-center">
+                                    <img src="./assets/img/p1.jpg" alt="" class="best-player-item-img">
+                                    <p class="best-player-item__name-text flex-grow-1">Thái Hùng Văn</p>
+                                    <span class="team-item__detail">
+                                        <span class="player-score">15</span>
+                                        <i class="fab fa-angellist"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Best players -->
+                </div>
+                <!-- /Start tab -->
+
+                <div class="middle-tab col-xl-6">
+                    <!-- <h1>Test heading 1</h1>
+                    <h2>Test heading 2</h2>
+                    <h3>Test heading 3</h3>
+                    <h4>Test heading 4</h4>
+                    <p class="subtitle">Test subtitle</p>
+                    <p class="label">Test label</p> -->
+                    <!-- Banner -->
+                    <div class="banner mb-5">
+                        <span class="bg-deco"></span>
+                        <div class="banner-content">
+                            <img src="" alt="" class="banner-img">
+                            <h2 class="banner-title">Hội Thao </br> Hằng Năm 2021</h2>
+                            <p class="label">Hơn 50 cơ sở giáo dục trên toàn quốc tham gia.</p>
+                            <button type="button" class="btn btn-light banner-btn">Tham gia ngay<i
+                                    class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <!-- /Banner -->
+
+                    <!-- Matches -->
+                    <!-- Filter bar -->
+                    <div class="filter-tag d-flex flex-wrap align-items-center">
+                        <p class="label">Trận đấu gần đây</p>
+
+                        <div class="search-bar">
+                            <input class="form-control search-box" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                        </div>
+                        <div class="filter-tag d-flex flex-grow-1">
+                            <p>Lọc: </p>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Giờ
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">6:30 AM</a></li>
+                                    <li><a class="dropdown-item" href="#">1:00 PM</a></li>
+                                    <li><a class="dropdown-item" href="#">8:30 PM</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Địa điểm
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Nhà văn hóa sinh viên</a></li>
+                                    <li><a class="dropdown-item" href="#">Cầu cá lóc</a></li>
+                                    <li><a class="dropdown-item" href="#">Đường Trần Hưng Đạo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="" class="text-end filter-tag__view-all">Xem tất cả</a>
+                    </div>
+                    <!-- /Filter bar -->
+
+                    <!-- Matches -->
+                    <ul class="matches-list">
+                        <li class="match-item d-flex align-items-center mb-3">
+                            <div class="match-item__match d-flex">
+                                <div class="match-item__match-left d-flex align-items-center">
+                                    <img src="./assets/img/logo1.png" alt="" class="match__logo match__match-left-logo">
+                                    <p class="match-item__match-left-name">ĐH NN&CN VN</p>
+                                </div>
+                                <span class="label">vs</span>
+                                <div class="match-item__match-right d-flex align-items-center">
+                                    <img src="./assets/img/logo2.png" alt=""
+                                        class="match__logo match__match-right-logo">
+                                    <p class="match-item__match-right-name">ĐH VH TP.HCM</p>
+                                </div>
+                            </div>
+                            <div class="match-item__info d-flex flex-wrap flex-grow-1">
+                                <div class="match-item__time d-flex">
+                                    <span><i class="fas fa-clock match-item__icon"></i></span>
+                                    <p class="match-item__time-text">6:30 AM</p>
+                                </div>
+                                <div class="match-item__location d-flex">
+                                    <span><i class="fas fa-map-marker-alt match-item__icon"></i></span>
+                                    <p class="match-item__location-text align-items-center">KWANGYA</p>
+                                </div>
+                            </div>
+                            <span class="match-item__detail">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </li>
+                    </ul>
+                    <!-- /Matches -->
+                </div>
+
+                <div class="end-tab col-xl-3">
+                    <div class="light calendar">
+                        <div class="calendar-header">
+                            <span class="month-picker" id="month-picker">February</span>
+                            <div class="year-picker">
+                                <span class="year-change" id="prev-year">
+                                    <pre><</pre>
+                                </span>
+                                <span id="year">2021</span>
+                                <span class="year-change" id="next-year">
+                                    <pre>></pre>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="calendar-week-day">
+                                <div>CN</div>
+                                <div>Hai</div>
+                                <div>Ba</div>
+                                <div>Tư</div>
+                                <div>Năm</div>
+                                <div>Sáu</div>
+                                <div>Bảy</div>
+                            </div>
+                            <div class="calendar-days"></div>
+                        </div>
+                        <div class="month-list"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/calendar.js"></script>
+</body>
+
+</html>
