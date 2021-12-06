@@ -77,6 +77,7 @@ li {
 
 a {
     text-decoration: none !important;
+    /* color: #007330 !important; */
 }
 
 h1 {
@@ -114,7 +115,7 @@ h4 {
 
 p {
     font-size: 1.2rem !important;
-    align-self: center;
+    /* align-self: center; */
 }
 
 span {
