@@ -43,13 +43,13 @@
 
     $('#register-form').validate({
         rules: {
-            first_name: {
+            name: {
                 required: true,
             },
-            last_name: {
+            username: {
                 required: true,
             },
-            company: {
+            password: {
                 required: true
             },
             email: {
