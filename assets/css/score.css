@@ -1,0 +1,27 @@
+.score-note.nav-link, 
+.match-note.nav-link,
+.match-edit.nav-link {
+    color: #007b34;
+}
+
+.nav-pills li.nav-item .score-note:hover,
+.nav-pills li.nav-item .match-note:hover,
+.nav-pills li.nav-item .match-edit:hover {
+    color: #fff !important;
+    background-color: #00a65a;
+}
+
+.nav-pills li.nav-item .score-note.active,
+.nav-pills li.nav-item .match-note.active,
+.nav-pills li.nav-item .match-edit.active {
+    color: #fff;
+    background-color: #007b34;
+}
+
+input[class*="team-score"] {
+    width: 50px;
+}
+
+.tab-content.hide {
+    display: none !important;
+}
